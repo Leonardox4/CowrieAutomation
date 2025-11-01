@@ -7,3 +7,4 @@ python -m pip install --upgrade pip
 python -m pip install -e .
 cowrie start
 tail -f var/log/cowrie/cowrie.log 
+sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
